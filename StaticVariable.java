@@ -1,3 +1,5 @@
+package com.fundamental;
+
 import java.util.Scanner;
 
 public class StaticVariable {

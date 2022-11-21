@@ -1,4 +1,4 @@
-
+package com.fundamental;
 
 import java.util.Scanner;
 
@@ -58,7 +58,7 @@ class D extends A
 		System.out.println("D : "+d);
 	}
 }
-public class inheritanceDemo {
+public class InheritanceDemo {
 
 	public static void main(String[] args) {
 		B b1=new B();
@@ -69,7 +69,7 @@ public class inheritanceDemo {
 		b1.getB();
 		c1.getC();
 		d1.getD();
-		b1.putA();
+		c1.putA();
 		b1.putB();
 		c1.putC();
 		d1.putD();

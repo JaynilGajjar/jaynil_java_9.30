@@ -1,24 +1,22 @@
 import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Set;
 
-public class HashmapDemo {
-	
+public class HashMapDemo {
+
 	public static void main(String[] args) {
+		HashMap hm=new HashMap();
+		hm.put(1,"Ankush");
+		hm.put(2,"Varshal");
+		hm.put(3,"Bhagyesh");
+		hm.put(4,"Dev");
+		hm.put(5,"Aditya");
+		hm.put(6,"Krupa");
+		hm.put(7,"Nishit");
+		hm.put(8,"Janvi");
 		
-		HashMap map=new HashMap();
-		map.put(1,"jay");
-		map.put(2,"java");
-		map.put(3,"tops");
-		map.put(4,"iskon");
-		map.put(5,"demo");
-		map.put(6,"test");
-		
-		System.out.println(map);
-		Set set=map.entrySet();
-		Iterator itr=set.iterator();
-		while(itr.hasNext()){
-			System.out.println(itr.next());
-		}
+		System.out.println(hm);
+		System.out.println(hm.get(3));
+		System.out.println(hm.remove(4));
+		System.out.println(hm);
+		System.out.println(hm.size());
 	}
 }

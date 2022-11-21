@@ -1,4 +1,4 @@
-
+package com.fundamental;
 
 abstract class abs1
 {
@@ -15,7 +15,7 @@ class abs2 extends abs1
 	}
 	
 }
-public class abstractdemo {
+public class AbstractDemo {
 
 	public static void main(String[] args) {
 		abs2 a =new abs2();

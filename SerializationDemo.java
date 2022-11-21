@@ -4,35 +4,39 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
-class student implements Serializable{
-	int rno;
-	String sname;
-	public student(int rno, String sname) {
-		this.rno = rno;
-		this.sname = sname;
+class Emp implements Serializable
+{
+	int empno;
+	String ename;
+	double salary;
+	
+	public Emp(int empno, String ename, double salary) {
+		this.empno = empno;
+		this.ename = ename;
+		this.salary = salary;
 	}
 	public String toString() {
-		return "Roll no:"+rno+"\nStudent Name:"+sname;
+		return "EMPNO : "+empno+"\nENAME : "+ename+"\nSALARY : "+salary;
 	}
+	
 }
 
 public class SerializationDemo {
+
 	public static void main(String[] args) throws Exception {
+		Emp e1=new Emp(1, "Jigar", 10000);
 		
-	
-	student s1=new student(5, "Jynil");
-	FileOutputStream fos=new FileOutputStream("ser");
-	ObjectOutputStream oos=new ObjectOutputStream(fos);
-	oos.writeObject(s1);
-	oos.flush();
-	oos.close();
-	System.out.println("object written successfully");
-	
-	FileInputStream fis=new FileInputStream("ser");
-	ObjectInputStream ois=new ObjectInputStream(fis);
-	student s2= (student) ois.readObject();
-	ois.close();
-	System.out.println(s2);
+		FileOutputStream fos=new FileOutputStream("ser");
+		ObjectOutputStream oos=new ObjectOutputStream(fos);
+		oos.writeObject(e1);
+		oos.flush();
+		oos.close();
+		System.out.println("Object Written Successfully");
+		
+		FileInputStream fis=new FileInputStream("ser");
+		ObjectInputStream ois=new ObjectInputStream(fis);
+		Emp1 e2=(Emp1) ois.readObject();
+		ois.close();
+		System.out.println(e2);
 	}
-	
 }
